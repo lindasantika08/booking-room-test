@@ -22,7 +22,7 @@
             position: absolute;
             inset: 0;
             background: rgba(0,0,0,0.4);
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(2px);
         }
 
         .login-box {
@@ -95,7 +95,7 @@
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit" class="login-btn">Login</button>
         </form>
-        {{-- <p>Belum punya akun? <a href="{{ route('register') }}">Daftar</a>.</p> --}}
+        <p>Belum punya akun? <a href="{{ route('register') }}">Daftar</a>.</p>
     </div>
 </body>
 </html>

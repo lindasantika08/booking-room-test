@@ -32,7 +32,6 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            // Cek role user untuk redirect
             if ($user->role === 'admin') {
                 return redirect()->intended('/admin/dashboard')
                     ->with('success', 'Berhasil login sebagai Admin!');
@@ -54,7 +53,6 @@ class AuthController extends Controller
             return view('auth.register');
         }
 
-        // proses register nanti bisa ditambah
     }
 
     public function logout(Request $request)

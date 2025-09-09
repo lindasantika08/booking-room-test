@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Ruang Kantor')
-@section('subtitle', 'List ruang kantor yang tersedia')
+@section('title', 'Kelola Ruangan')
 
 @section('content')
     <style>
@@ -291,12 +290,12 @@
 
     <!-- Statistics Grid -->
     <div class="stats-grid">
-        @if(Auth::user()->role === 'user')
+        @if(Auth::user()->role === 'admin')
 
             <!-- Rooms Grid -->
             <!-- Rooms Grid -->
             <div class="rooms-grid"
-                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
+                style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
                 @forelse($rooms as $room)
                     <div class="room-card"
                         style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; cursor: pointer;">
@@ -330,7 +329,7 @@
                         {{-- Tombol --}}
                         <a href="{{ route('user.show', $room->id) }}" class="book-btn"
                             style="width: 100%; display:inline-block; text-align:center; background: #667eea; color: white; border: none; padding: 0.75rem; border-radius: 8px; font-weight: 500; cursor: pointer; transition: all 0.3s ease;">
-                            <i class="fas fa-calendar-plus"></i> Booking
+                            <i class="fas fa-calendar-plus"></i> Lihat Detail
                         </a>
                     </div>
                 @empty

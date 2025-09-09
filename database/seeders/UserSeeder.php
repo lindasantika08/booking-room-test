@@ -17,16 +17,70 @@ class UserSeeder extends Seeder
             'name' => 'Administrator',
             'username' => 'admin',
             'email' => 'admin@proyek.com',
-            'password' => '1234567890', // Akan di-hash otomatis karena cast
+            'password' => '1234567890',
             'role' => 'admin',
             'email_verified_at' => now(),
         ]);
 
         User::create([
-            'name' => 'User Biasa',
-            'username' => 'user',
+            'name' => 'Administrator 2',
+            'username' => 'admin2',
+            'email' => 'admin2@proyek.com',
+            'password' => '1234567890',
+            'role' => 'admin',
+            'email_verified_at' => now(),
+        ]);
+
+        User::create([
+            'name' => 'Administrator 3',
+            'username' => 'admin3',
+            'email' => 'admin3@proyek.com',
+            'password' => '1234567890',
+            'role' => 'admin',
+            'email_verified_at' => now(),
+        ]);
+
+        User::create([
+            'name' => 'Linda Santika',
+            'username' => 'Linda',
             'email' => 'user@proyek.com',
-            'password' => '1234567890', // Akan di-hash otomatis karena cast
+            'password' => '1234567890',
+            'role' => 'user',
+            'email_verified_at' => now(),
+        ]);
+
+        User::create([
+            'name' => 'Thoriq',
+            'username' => 'Riq',
+            'email' => 'user2@proyek.com',
+            'password' => '1234567890',
+            'role' => 'user',
+            'email_verified_at' => now(),
+        ]);
+
+        User::create([
+            'name' => 'Muhammad',
+            'username' => 'Muh',
+            'email' => 'user3@proyek.com',
+            'password' => '1234567890',
+            'role' => 'user',
+            'email_verified_at' => now(),
+        ]);
+
+        User::create([
+            'name' => 'Fadhli',
+            'username' => 'Fad',
+            'email' => 'user4@proyek.com',
+            'password' => '1234567890',
+            'role' => 'user',
+            'email_verified_at' => now(),
+        ]);
+
+        User::create([
+            'name' => 'Cinut',
+            'username' => 'Nut',
+            'email' => 'user5@proyek.com',
+            'password' => '1234567890',
             'role' => 'user',
             'email_verified_at' => now(),
         ]);
